@@ -1,49 +1,79 @@
-body {
+body{
     background-color: lightblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Gamja Flower', cursive;
 }
-
+/* 1. 기존에 있던 코드 */
 .nxb-title-box {
     text-align: center;
 }
+/* 2. 아래 내용을 새로 추가하세요! */
+.gamja-flower-regular{
+    margin-top: 40px;
+    font-size: 160px;
+    margin-bottom: 10px;
+    font-family: "Gamja Flower", sans-serif;
 
-.nxb-title-box h1 {
-    font-size: 80px;
-    margin-bottom: 20px;
+    display: flex;           /* 텍스트와 버튼을 플렉스 박스로 취급 */
+    align-items: center;     /* 세로축의 정중앙에 나열 */
+    justify-content: center; /* 가로축도 중앙 정렬 */
+    gap: 15px;               /* 글자와 버튼 사이의 간격 */
 }
 
-.nxb-button-box {
-    padding: 20px 40px;
-    font-size: 40px; /* 버튼 글자를 크게! */
-    cursor: pointer;
-    background-color: white;
-    border: 2px solid cornflowerblue;
-    border-radius: 15px;
-    font-family: 'Gamja Flower', cursive;
-}
+.nxb-button-box{
+    margin: 5px auto 20px;
+    padding: 10px;
+    width: 700px;
+    max-width: 700px;
+    height: 120px;
 
-.badge-group {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.nxb-badge-box {
-    background-color: cornflowerblue; /* 뱃지 색깔 다시 입히기 */
+    background-color: #5C7CFA;
+    border-radius: 40px;
+    font-family: "Gamja Flower", sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 1px;
     color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 24px; /* 뱃지 글자 크기 */
+
+    /* 👇 이 줄을 추가해 주세요! */
+    box-shadow: 0 8px 20px rgba(92, 124, 250, 0.8);
+}
+
+.nxb-image-box {
+    display: flex; /* 1. 정렬을 위한 Flexbox 모드 활성화 */
+    justify-content: center; /* 2. 가로축 중앙 정렬 */
+    margin-top: 60px; /* 3. 제목과의 간격 (원하는 만큼 조절) */
 }
 
 .nxb-image-box img {
-    margin-top: 30px;
-    max-width: 400px; /* 사진 크기 조절 */
-    border-radius: 50px;
+    border-radius: 40px;
+    width: 850px;
+    max-width: 100%; /* 4. 이미지가 화면보다 커지지 않게 방지 */
+    height: 1100px; /* 5. 이미지 비율 유지 */
+}
+
+/* 1. 뱃지들을 가로로 예쁘게 정렬해주는 부모 설정 */
+.badge-group {
+    display: flex;            /* 가로로 나열 */
+    justify-content: center;   /* 가운데 정렬 */
+    gap: 10px;                /* 뱃지 사이 간격 */
+    margin-top: 30px;         /* 위 버튼과의 간격 */
+    width: 100%;              /* 전체 너비 사용 */
+}
+
+/* 2. 개별 뱃지 스타일 수정 */
+.nxb-badge-box {
+    background-color: cornflowerblue;
+    display: flex;            /* 글자를 뱃지 중앙에 놓기 위해 */
+    align-items: center;
+    justify-content: center;
+    border-radius: 17px;
+
+    width: 350px;              /* 고정 너비 해제 (글자 길이에 맞게) */
+    min-width: 350px;         /* 최소 이 정도는 되게 설정 */
+    padding: 15px 35px;       /* 안쪽 여백을 줘서 통통하게 */
+
+    white-space: nowrap;      /* 글자가 밑으로 꺾이지 않게 방지 */
+    /* 배경색, 테두리 등은 기존 코드 그대로 두시면 됩니다 */
+
+    font-family: "Gamja Flower", sans-serif;
+    font-size: 60px;
 }
